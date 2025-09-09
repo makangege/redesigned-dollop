@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
-RUN apt -y update && apt install -y curl wget
+RUN apt -y update && apt install -y curl wget xz-utils
 COPY . .
 
 # Expose the port that Flask will run on
